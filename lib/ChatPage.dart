@@ -14,7 +14,7 @@ class _ChatPageState extends State<ChatPage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 234, 183, 210),
-          title: const Text('Chats Page'),
+          title: const Text('Chat Page'),
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
