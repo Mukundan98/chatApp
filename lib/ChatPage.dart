@@ -23,7 +23,53 @@ class _ChatPageState extends State<ChatPage> {
               child: ListView.builder(
                 itemCount: messages.length,
                 itemBuilder: (context, index) {
-                  return TextRaw(message: messages[index]);
+                  if (index%2==1)
+                  return Padding(
+  padding: EdgeInsets.all(10),
+  child: Align(
+    alignment: Alignment.topRight,
+    child: Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.green[400],
+      ),
+      child: Text(
+        messages[index],
+        style: TextStyle(),
+      ),
+    ),
+  ),
+);
+                  else 
+                  return Padding(
+  padding: EdgeInsets.all(10),
+  child: Align(
+    alignment: Alignment.topLeft,
+    child: Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.grey[200],
+      ),
+      child: Text(
+        messages[index],
+        style: TextStyle(),
+      ),
+    ),
+  ),
+);
+                  // return Container(
+                  //   width: 10,
+                  //   margin: EdgeInsets.only(bottom: 10),
+                  //   padding: EdgeInsets.all(10),
+                  //   decoration: BoxDecoration(
+                  //   borderRadius: BorderRadius.circular(20),
+                  //    color: Colors.green[100],
+                  // ),
+                  //   alignment: Alignment.bottomLeft,
+                  //   child: Text(messages[index]));
+                    
                 },
               ),
             ),
