@@ -19,8 +19,9 @@ class _loginState extends State<login> {
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-            Color.fromARGB(255, 16, 174, 192),
-            Color.fromARGB(255, 230, 158, 197)
+            Color.fromARGB(255, 192, 107, 16),
+            Color.fromARGB(255, 8, 190, 240),
+             Color.fromARGB(211, 243, 30, 30)
           ])),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -54,20 +55,20 @@ class _loginState extends State<login> {
   Widget _icon() {
     return Container(
       decoration: BoxDecoration(
-          border: Border.all(color: Colors.white, width: 2),
+          border: Border.all(color: Color.fromARGB(255, 246, 173, 4), width: 5),
           shape: BoxShape.circle),
       child: const Icon(
         Icons.person,
-        color: Colors.white,
-        size: 130,
+        color: Color.fromARGB(255, 240, 243, 237),
+        size: 120,
       ),
     );
   }
 
   Widget _inputField(String hintText, TextEditingController controller) {
     var border = OutlineInputBorder(
-        borderRadius: BorderRadius.circular(18),
-        borderSide: const BorderSide(color: Colors.white));
+        borderRadius: BorderRadius.circular(25),
+        borderSide: const BorderSide(color: Color.fromARGB(255, 11, 7, 248)));
 
     return TextField(
       style: const TextStyle(
@@ -107,8 +108,8 @@ class _loginState extends State<login> {
           )),
       style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
-          primary: Colors.white,
-          onPrimary: Color.fromARGB(255, 16, 174, 192),
+          primary: Color.fromARGB(255, 80, 241, 6),
+          onPrimary: Color.fromARGB(241, 10, 16, 19),
           padding: const EdgeInsets.symmetric(vertical: 10)),
     );
   }
@@ -122,11 +123,12 @@ class _loginState extends State<login> {
           content: Text(errorMessage),
           actions: [
             ElevatedButton(
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.blue)),
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text("OK"),
-            ),
+              child: const Text("OK",style: TextStyle(color: Colors.white),),
+            )
           ],
         );
       },
